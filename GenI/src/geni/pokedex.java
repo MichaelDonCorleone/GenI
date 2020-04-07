@@ -12,7 +12,7 @@ package geni;
 public class pokedex {
     //base stats will be accessible here, all we will need is a class that will have an Identifier and that will return all data needed.
     public enum Pokemon {
-        Bulbasaur(45,49,65,65,45), 
+        Bulbasaur(new int[]{45,49,65,65,45}), 
         Ivysaur, 
         Venusaur, 
         Charmander, 
@@ -166,21 +166,29 @@ public class pokedex {
     }
     
     public enum type {
-        Normal(1,1,1,1,1,1,1,1,1,1,1,1,0.5,0,1,1,1,1),
-        Fire(),
-        Water,
-        Electric,
-        Grass,
-        Ice,
-        Fight,
-        Poison,
-        Ground,
-        Flying,
-        Psychic,
-        Bug,
-        Rock,
-        Ghost,
-        Dragon
+        Normal(new double[]{1,1,1,1,1,1,1,1,1,1,1,1,0.5,0,1}),
+        Fire(new double[]{1,0.5,0.5,1,2,2,1,1,1,1,1,2,0.5,1,0.5}),
+        Water(new double[]{1,2,0.5,1,0.5,1,1,1,2,1,1,1,2,1,0.5}),
+        Electric(new double[]{1,1,2,0.5,0.5,1,1,1,0,2,1,1,1,1,0.5}),
+        Grass(new double[]{1,0.5,2,1,0.5,1,1,0.5,2,0.5,1,0.5,2,1,0.5}),
+        Ice(new double[]{1,1,0.5,1,2,0.5,1,1,2,2,1,1,1,1,2}),
+        Fighting(new double[]{2,1,1,1,1,2,1,0.5,1,0.5,0.5,0.5,2,0,1}),
+        Poison(new double[]{1,1,1,1,2,1,1,0.5,0.5,1,1,2,0.5,0.5}),
+        Ground(new double[]{1,2,1,2,0.5,1,1,2,1,0,1,0.5,2,1,1}),
+        Flying(new double[]{1,1,1,0.5,2,1,2,1,1,1,1,2,0.5,1,1}),
+        Psychic(new double[]{1,1,1,1,1,1,2,2,1,1,0.5,1,1,1,1}),
+        Bug(new double[]{1,0.5,1,1,2,1,0.5,2,1,0.5,2,1,1,0.5,1}),
+        Rock(new double[]{1,2,1,1,1,2,0.5,1,0.5,2,1,2,1,1,1}),
+        Ghost(new double[]{0,1,1,1,1,1,1,1,1,1,0,1,1,2,1}),
+        Dragon(new double[]{1,1,1,1,1,1,1,1,1,1,1,1,1,1,2});
+        
+        private final double[] battleCoefficients;
+        private type(double[] battleCoefficients){
+            this.battleCoefficients = battleCoefficients;
+        }
+        
+        private double[] getBattleCoefficients() {
+            return this.battleCoefficients;
+        }
     }
-    public 
 }
