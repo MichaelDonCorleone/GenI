@@ -215,4 +215,15 @@ public class pokedex {
             return this.battleCoefficients;
         }
     }
+    
+    public enum badge {
+        Boulder,
+        Cascade,
+        Thunder,
+        Rainbow,
+        Soul,
+        Marsh,
+        Volcano,
+        Earth
+    }
 }
