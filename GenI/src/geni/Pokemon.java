@@ -28,6 +28,9 @@ public class Pokemon {
     
     // fetch data functions
     
+    public int getID() {
+        return this.ID;
+    }
     public int getOriginalTrainerID() {
         return this.originalTrainerID;
     }
