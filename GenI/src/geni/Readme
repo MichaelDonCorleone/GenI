@@ -1,11 +1,11 @@
-How to use pokedex class
+How to use data class
 first you have to import it in your class :
-import geni.pokedex.*;
+import geni.data.*;
 then you can access data in two ways.
 First :
-pokemon.name.fuction
+pokedex.name.fuction
 Second :
-pokemon.values()[index].function
+pokedex.values()[index].function
 
 index will go from 0 to 150 so if you want Mew you need to use PokedexRealID which in our
 case is 151 and subtract 1.
@@ -32,7 +32,7 @@ Look at the enum section to see how you can extract data from these types of var
 
 Class enum type :
 To use this you have to import the following :
-import geni.pokedex.*;
+import geni.data.*;
 
 How this can be used? Well, this class lists all the available pokemon types and the effectiveness of specific types of moves on the types of pokemon.
 
