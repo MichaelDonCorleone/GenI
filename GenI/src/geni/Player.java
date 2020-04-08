@@ -21,7 +21,7 @@ public class Player {
         this.name = name;
     }
     //setters
-    public void setBadges(int badgeNo, int state) {
+    public void setBadge(int badgeNo, int state) {
         if(state == 1 || state == 0) {
             this.badges[badgeNo] = state;
         }
