@@ -1,0 +1,99 @@
+How to use pokedex class
+first you have to import it in your class :
+import geni.pokedex.*;
+then you can access data in two ways.
+First :
+pokemon.name.fuction
+Second :
+pokemon.values()[index].function
+
+index will go from 0 to 150 so if you want Mew you need to use PokedexRealID which in our
+case is 151 and subtract 1.
+
+available functions : 
+
+getBattleData() : returns a integer array of base stats of the pokemon in the following order
+
+index - Data
+--------------------
+0     - Total Stats
+1     - HP
+2     - Attack
+3     - Defense
+4     - Sp. Attack
+5     - Sp. Defense
+6     - Speed
+
+getType1() : returns an enum value of first battle type of the selected pokemon
+
+getType2() : returns an enum value of the second battle type of the selected pokemon
+
+Look at the enum section to see how you can extract data from these types of variables
+
+Class enum type :
+To use this you have to import the following :
+import geni.pokedex.*;
+
+How this can be used? Well, this class lists all the available pokemon types and the effectiveness of specific types of moves on the types of pokemon.
+
+Two ways to access :
+
+First :
+
+type.nameOfType.function
+
+Second :
+
+type.values()[index].function
+
+index can have values between 0 and 14 
+
+Index  -  Name of Type
+----------------------
+0      -  Normal
+1      -  Fire
+2      -  Water
+3      -  Electric
+4      -  Grass
+5      -  Ice
+6      -  Fighting
+7      -  Poison
+8      -  Ground
+9      -  Flying
+10     -  Psychic
+11     -  Bug
+12     -  Rock
+13     -  Ghost
+14     -  Dragon
+
+
+Available functions :
+
+getBattleCoefficients();
+
+This returns an array of doubles. Each index shows how the current selected type fairs
+against the other 14 types. i.e.
+
+type.Fire.getBattleCoefficients()[i] if the specific index i is equal to 4
+then the value that would return is 2.0 which means that the damage incurred from
+a fire attack on a grass pokemon is 2 times effective.
+
+i takes values between 0 and 14 and correcspond to the following
+
+Index  -  Name of Type for which the coefficient of battle is given against
+---------------------------------------------------------------------------
+0      -  Normal
+1      -  Fire
+2      -  Water
+3      -  Electric
+4      -  Grass
+5      -  Ice
+6      -  Fighting
+7      -  Poison
+8      -  Ground
+9      -  Flying
+10     -  Psychic
+11     -  Bug
+12     -  Rock
+13     -  Ghost
+14     -  Dragon
