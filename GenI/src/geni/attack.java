@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package geni;
-import geni.pokedex.*;
+import geni.data.*;
 
 /**
  *
