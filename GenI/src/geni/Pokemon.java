@@ -30,6 +30,8 @@ public class Pokemon {
         this.level = level;
         if(exp == 0) {
             this.exp = level^3;
+        } else {
+            this.exp = exp;
         }
         this.IV = new int[]{0,(int) (Math.random()*32),(int) (Math.random()*32),(int) (Math.random()*32),(int) (Math.random()*32),(int) (Math.random()*32),(int) (Math.random()*32)};
         //Individual boosted genetic attributes generated when the pokemon are created
