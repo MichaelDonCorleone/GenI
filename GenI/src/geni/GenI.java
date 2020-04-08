@@ -5,6 +5,9 @@
  */
 package geni;
 
+
+import geni.pokedex.*;
+
 /**
  *
  * @author PCuser
@@ -16,6 +19,10 @@ public class GenI {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        for(int i=0; i<6; i++) {
+            int HP = pokemon.values()[0].getBattleData()[1];
+            System.out.println(type.Bug.getBattleCoefficients()[0]);          
+        }
     }
     
 }
