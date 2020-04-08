@@ -19,7 +19,7 @@ public class Player {
     private String email;
     private String ipAddress;
     private String previousIPaddress;
-    private Pokemon[] lineup;
+    private final Pokemon[] lineup;
     
     public Player(String name, String username, String password, String email){
         this.trainerID = count++;
@@ -113,11 +113,30 @@ public class Player {
         return this.name;
     }
     
+    public String getPassword() {
+        return this.password;
+    }
+    
+    public String getEmail() {
+        return this.email;
+    }
     public int[] getBadges() {
         return this.badges;
     }
     
     public int getTrainerID() {
         return this.trainerID;
+    }
+    
+    public String getIpAddress() {
+        return  this.ipAddress;
+    }
+    
+    public String getPreviousIpAddress() {
+        return this.previousIPaddress;
+    }
+    
+    public Pokemon[] getLineup() {
+        return lineup;
     }
 }

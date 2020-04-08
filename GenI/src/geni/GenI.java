@@ -7,6 +7,7 @@ package geni;
 
 
 import geni.data.*;
+import java.util.Random;
 
 /**
  *
@@ -21,7 +22,7 @@ public class GenI {
         // TODO code application logic here
         for(int i=0; i<8; i++) {
             int HP = pokedex.values()[0].getBattleData()[1];
-            System.out.println(badge.values()[i]);          
+            System.out.println(badge.values()[i]);
         }
     }
     

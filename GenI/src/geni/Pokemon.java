@@ -17,6 +17,7 @@ public class Pokemon {
     private final int originalTrainerID;
     private int trainerID;
     private final pokedex pokemonData;
+    private final int[] IV;
     
     //Constructor
     public Pokemon(int originalTrainerID, int trainerID, pokedex pokemonData) {
@@ -24,6 +25,10 @@ public class Pokemon {
         this.originalTrainerID = originalTrainerID;
         this.trainerID = trainerID;
         this.pokemonData = pokemonData;
+        this.IV = new int[]{0,(int) (Math.random()*32),(int) (Math.random()*32),(int) (Math.random()*32),(int) (Math.random()*32),(int) (Math.random()*32),(int) (Math.random()*32)};
+        //Individual boosted genetic attributes generated when the pokemon are created
+        //Total IV, HP,Attack,Defense,Sp. Atk,Sp. Def,Speed
+        this.IV[0] = this.IV[1] + this.IV[2] + this.IV[3] + this.IV[4] + this.IV[5] + this.IV[6];
     }
     
     // fetch data functions
@@ -41,6 +46,10 @@ public class Pokemon {
     
     public pokedex getPokemonData() {
         return this.pokemonData;
+    }
+    
+    public int[] getIV() {
+        return this.IV;
     }
     
     //set data functions
