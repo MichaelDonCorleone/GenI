@@ -16,15 +16,21 @@ public class Pokemon {
     private final int ID;
     private final int originalTrainerID;
     private int trainerID;
-    private final pokedex pokemonData;
+    private final int pokedexID;
+    private int level;
+    private int exp;
     private final int[] IV;
     
     //Constructor
-    public Pokemon(int originalTrainerID, int trainerID, pokedex pokemonData) {
+    public Pokemon(int originalTrainerID, int trainerID, int pokemonID, int pokedexID, int level,int exp) {
         this.ID = pokemonCount++;
         this.originalTrainerID = originalTrainerID;
         this.trainerID = trainerID;
-        this.pokemonData = pokemonData;
+        this.pokedexID = pokedexID;
+        this.level = level;
+        if(exp == 0) {
+            this.exp = level^3;
+        }
         this.IV = new int[]{0,(int) (Math.random()*32),(int) (Math.random()*32),(int) (Math.random()*32),(int) (Math.random()*32),(int) (Math.random()*32),(int) (Math.random()*32)};
         //Individual boosted genetic attributes generated when the pokemon are created
         //Total IV, HP,Attack,Defense,Sp. Atk,Sp. Def,Speed
@@ -36,6 +42,7 @@ public class Pokemon {
     public int getID() {
         return this.ID;
     }
+    
     public int getOriginalTrainerID() {
         return this.originalTrainerID;
     }
@@ -44,8 +51,8 @@ public class Pokemon {
         return this.trainerID;
     }
     
-    public pokedex getPokemonData() {
-        return this.pokemonData;
+    public int pokedexID() {
+        return this.pokedexID;
     }
     
     public int[] getIV() {
@@ -57,5 +64,13 @@ public class Pokemon {
     //used for trading/gifting pokemon
     public void setTrainerID(int trainerID) {
         this.trainerID = trainerID;
+    }
+    
+    public void setLevel(int level) {
+        this.level = level;
+    }
+    
+    public void setExperience(int exp) {
+        this.exp = exp;
     }
 }
