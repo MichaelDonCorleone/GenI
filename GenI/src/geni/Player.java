@@ -7,7 +7,7 @@ package geni;
 
 /**
  *
- * @author PCuser
+ * @author Michael Corleone
  */
 public class Player {
     private static int count = 0;
@@ -19,14 +19,16 @@ public class Player {
     private String email;
     private String ipAddress;
     private String previousIPaddress;
+    private Pokemon[] lineup;
     
     public Player(String name, String username, String password, String email){
-        this.badges = new int[]{0,0,0,0,0,0,0,0};
         this.trainerID = count++;
         this.name = name;
         this.username = username;
         this.password = password;
         this.email = email;
+        this.lineup = new Pokemon[6];
+        this.badges = new int[]{0,0,0,0,0,0,0,0};
     }
     //setters
     
@@ -59,6 +61,10 @@ public class Player {
         if(state == 1 || state == 0) {
             this.badges[badgeNo] = state;
         }
+    }
+    
+    public void setLineUp(int position, Pokemon pokemonToBeAssigned) {
+        
     }
     
     //getters

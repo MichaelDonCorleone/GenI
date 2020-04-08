@@ -7,7 +7,7 @@ package geni;
 
 /**
  *
- * @author PCuser
+ * @author Michael Corleone
  */
 public class data {
     //base stats will be accessible here, all we will need is a class that will have an Identifier and that will return all data needed.

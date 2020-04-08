@@ -10,7 +10,7 @@ import geni.data.*;
 
 /**
  *
- * @author PCuser
+ * @author Michael Corleone
  */
 public class GenI {
 
