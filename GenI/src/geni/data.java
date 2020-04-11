@@ -188,6 +188,10 @@ public class data {
         public int[] getBattleData() {
             return this.battleData;
         }
+        
+        public int[] getEV() {
+            return this.EV;
+        }
     } 
         
     
