@@ -24,7 +24,7 @@ public class Pokemon {
     private int exp;
     private int currentHP;
     private int[] actualStats;
-    private final int[] IV;
+    private int[] IV;
     private int EV[];
     private int gender; // 0 for male, 1 for female, 2 for genderless
     private int moves[];
@@ -124,6 +124,10 @@ public class Pokemon {
         this.EV[index] = amount;
     }
     
+    public void setIV(int index, int amount){
+        this.IV[index] = amount;
+    }
+    
     public void setGender(int gender) {
         this.gender = gender;
     }
@@ -134,6 +138,7 @@ public class Pokemon {
     
     //use it after a pokemon levels up
     public void calculateActualStats() {
+        System.out.println(((((pokedex.values()[this.pokedexID-1].getBattleData()[1]+this.IV[1])*2+sqrt(this.EV[1])/4))*this.level/100)+this.level+10);
         this.actualStats[0] = (int) Math.round(((((pokedex.values()[this.pokedexID-1].getBattleData()[1]+this.IV[1])*2+sqrt(this.EV[1])/4))*this.level/100)+this.level+10);
         this.actualStats[1] =  (int) Math.round(((((pokedex.values()[this.pokedexID-1].getBattleData()[2]+this.IV[2])*2+sqrt(this.EV[2])/4))*this.level/100)+5);
         this.actualStats[2] = (int) Math.round(((((pokedex.values()[this.pokedexID-1].getBattleData()[3]+this.IV[3])*2+sqrt(this.EV[3])/4))*this.level/100)+5);

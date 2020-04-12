@@ -22,17 +22,12 @@ public class GenI {
         // TODO code application logic here
         ArrayList<Player> trainers = new ArrayList<>();
         ArrayList<Pokemon> pokemon = new ArrayList<>();
-        pokemon.add(new Pokemon(0,0,151,70,0,0));
-        
+        pokemon.add(new Pokemon(0,0,150,70,0,0));
+        pokemon.add(new Pokemon(1,1,151,70,0,0));
         trainers.add(new Player("Michael","Mafioso","jd@gmail.com","testingWaters1996"));
         trainers.add(new Player("thefeistyone","marvinStarving2020","canadianProdigy@hotmail.com","testOcean1996"));
         trainers.get(0).setLineUp(0, pokemon.get(0));
-        System.out.println(trainers.get(0).getLineup()[0].getActualStats()[0]);
-        System.out.println(trainers.get(0).getLineup()[0].getActualStats()[2]);
-        System.out.println(trainers.get(0).getLineup()[0].getActualStats()[3]);
-        System.out.println(trainers.get(0).getLineup()[0].getActualStats()[4]);
-        System.out.println(trainers.get(0).getLineup()[0].getActualStats()[5]);
-        System.out.println(pokedex.Mewtwo.getBattleData()[1]);
+        trainers.get(1).setLineUp(1, pokemon.get(1));
     }
     
 }
