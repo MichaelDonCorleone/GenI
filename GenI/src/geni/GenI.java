@@ -7,7 +7,7 @@ package geni;
 
 
 import geni.data.*;
-import java.util.Random;
+import java.util.ArrayList;
 
 /**
  *
@@ -20,10 +20,19 @@ public class GenI {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        for(int i=0; i<8; i++) {
-            int HP = pokedex.values()[0].getBattleData()[1];
-            System.out.println(badge.values()[i]);
-        }
+        ArrayList<Player> trainers = new ArrayList<>();
+        ArrayList<Pokemon> pokemon = new ArrayList<>();
+        pokemon.add(new Pokemon(0,0,151,70,0,0));
+        
+        trainers.add(new Player("Michael","Mafioso","jd@gmail.com","testingWaters1996"));
+        trainers.add(new Player("thefeistyone","marvinStarving2020","canadianProdigy@hotmail.com","testOcean1996"));
+        trainers.get(0).setLineUp(0, pokemon.get(0));
+        System.out.println(trainers.get(0).getLineup()[0].getActualStats()[0]);
+        System.out.println(trainers.get(0).getLineup()[0].getActualStats()[2]);
+        System.out.println(trainers.get(0).getLineup()[0].getActualStats()[3]);
+        System.out.println(trainers.get(0).getLineup()[0].getActualStats()[4]);
+        System.out.println(trainers.get(0).getLineup()[0].getActualStats()[5]);
+        System.out.println(pokedex.Mewtwo.getBattleData()[1]);
     }
     
 }
